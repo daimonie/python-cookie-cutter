@@ -1,0 +1,23 @@
+name: Default poetry build and test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-acc:
+    environment: acc
+    runs-on: ubuntu-latest
+    name: Run tests using poetry
+
+    steps:
+    - name: Checkout Project
+      uses: actions/checkout@v3
+
+    - name: Install project
+      run: make install
+
+    - name: Run tests
+      run: make test
