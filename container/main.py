@@ -1,7 +1,6 @@
-
-
 def func():
-	return "Hello there, General!"
+    return "Hello there, General!"
 
-if __name__=="__main__":
-	print(func)
+
+if __name__ == "__main__":
+    print(func)
